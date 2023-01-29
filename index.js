@@ -1,65 +1,36 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const path = require('path');
 
 const Employee = require('./lib/employee');
-const Manager = require('./lib/manager');
-const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern');
+const {Manager, questionsManager} = require('./lib/manager');
+const {Engineer} = require('./lib/engineer');
+const {Intern} = require('./lib/intern');
+const team = [];
+
+console.log(questionsManager)
+
+function start() {
+  inquirer
+    .prompt(questionsManager)
+    .then((data) => {
+      const manager = new Manager(data.name, data.id, data.email, data.officenumber);
+      team.push(manager)
+
+      console.log(team)
+    });
+}
 
 
-const questions = [
-  {
-    type: 'input',
-    message: 'Enter managers name.',
-    name: 'manager-name',
-  },
-  {
-    type: 'input',
-    message: 'Enter employee ID.',
-    name: 'employee-id',
-  },
-  {
-    type: 'input',
-    message: 'Enter email address.',
-    name: 'email',
-  },
-  {
-    type: 'input',
-    message: 'Enter office number.',
-    name: 'office',
-  },
-  {
-    type: 'list',
-    message: 'options',
-    choices: ["engineer", "intern", "finish building my team"],
-    name: 'options',
-  },
-  {
-    type: 'input',
-    message: 'Engineer',
-    name: 'engineer',
-  },
-  {
-    type: 'input',
-    message: 'What is the GitHub username?',
-    name: 'github',
 
-  },
-  {
-    type: 'input',
-    message: 'Intern.',
-    name: 'intern',
-  },
-  {
-    type: 'input',
-    message: 'Enter school.',
-    name: 'school',
-  },
+start()
+  // {
+  //   type: 'list',
+  //   message: 'options',
+  //   choices: ["engineer", "intern", "finish building my team"],
+  //   name: 'options',
+  // },
+  
 
-
-]
-
-inquirer
-  .prompt(questions)
-  .then((response) => {})
+// inquirer
+//   .prompt(questions)  //create this
+//   .then((response) => {})
