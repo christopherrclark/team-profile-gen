@@ -3,8 +3,8 @@ const fs = require("fs");
 
 const Employee = require('./lib/employee');
 const {Manager, questionsManager} = require('./lib/manager');
-const {Engineer} = require('./lib/engineer');
-const {Intern} = require('./lib/intern');
+const {Engineer,questionsEngineer } = require('./lib/engineer');
+const {Intern,questionsIntern } = require('./lib/intern');
 const team = [];
 
 console.log(questionsManager)
