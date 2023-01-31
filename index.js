@@ -14,6 +14,7 @@ const team = [];
 
 console.log(questionsManager)
 
+//create start function with funtion to create manager 
 function start() {
   function createManager() {
     inquirer
@@ -27,6 +28,7 @@ function start() {
 
   }
 
+// create function to create team with an list of choices in an array
 function createTeam() {
   inquirer.prompt([{
     type: "list",
@@ -50,6 +52,7 @@ function createTeam() {
   
   }})
 
+  // create function to create engineer
   function createEngineer() {
     inquirer
       .prompt(questionsEngineer)
@@ -62,6 +65,7 @@ function createTeam() {
 
   }
 
+  // create function to create intern
   function createIntern() {
     inquirer
       .prompt(questionsIntern)
@@ -75,8 +79,10 @@ function createTeam() {
   }
 
 }
+// create manager callback function
 createManager()
 
+// create function to build the team
 function buildTeam() {
   // Create the output directory if the dist path doesn't exist
   if (!fs.existsSync(DIST_DIR)) {
@@ -88,5 +94,5 @@ function buildTeam() {
 }
 
 
-
+//create start callback function
 start()
