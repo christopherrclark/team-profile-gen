@@ -20,3 +20,5 @@ The goal of this assignment was to build a Node.js command-line application that
 <!-- add styling -->
 
 ![Click here is a screen shot of the terminal with the questions/responses for the Team Profile Generator](./images/terminal-screenshot.png)
+
+![Click here is a screen shot the url created with the Team Profile Generator](./images/url-screenshot.png)
