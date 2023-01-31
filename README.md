@@ -13,7 +13,7 @@ The goal of this assignment was to build a Node.js command-line application that
 
 ### Here is a link to a sample HTML file created by the generator.
 
-[Click here to view a sample HTML file created by the generator.](/homework/team-profile-gen/dist/team.html)
+[Click here to view a sample HTML file created by the generator.](./dist/team.html)
 
 <!-- add tests using jest -->
 
