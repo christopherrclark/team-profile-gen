@@ -51,7 +51,7 @@ const generateTeam = team => {
         <ul class="list-group">
             <li class="list-group-item">ID: ${intern.getId()}</li>
             <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/${intern.getSchool()}" target="_blank" rel="noopener noreferrer">${intern.getSchool()}</a></li>
+            <li class="list-group-item">School: ${intern.getSchool()}</a></li>
         </ul>
       </div>
     </div>
